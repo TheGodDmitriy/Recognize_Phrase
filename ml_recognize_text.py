@@ -12,8 +12,7 @@ from sklearn.linear_model import LogisticRegression
 class RecognitionHandler():
 
     def __init__(self):
-        #Инициализация класса функций
-
+        
         #Инициализция dataset
         with open("dataset.json", "r", encoding='utf-8') as file:
             self.capitals = json.load(file)
@@ -25,6 +24,7 @@ class RecognitionHandler():
         self.model = RandomForestClassifier()  #настройки n_estimators, max_depth
         self.classifier_probability = LogisticRegression()
 
+        #Инициализация класса функций
         self.skill = MLSkills()
 
     def filter_text(self, text):
